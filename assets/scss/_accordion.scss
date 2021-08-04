@@ -1,0 +1,84 @@
+/*
+Theme Name:  Salient
+Description: Styles for the "Toggles" page builder element.
+*/
+
+body .toggle{
+  margin-bottom:15px
+}
+
+body .toggle h3,
+body .row .toggle h3 {
+  margin-bottom:0
+}
+.toggle h3 {
+  position:relative;
+  z-index:10;
+}
+
+body .toggle[data-inner-wrap="true"] > div,
+div[data-style="minimal_small"] .toggle[data-inner-wrap="true"] > div,
+div[data-style*="minimal"] .toggle[data-inner-wrap="true"] > div {
+  padding: 0;
+}
+
+.toggle >div >div:last-child,
+.toggle[data-inner-wrap="true"] .inner-toggle-wrap > div:last-child{
+  margin-bottom:0!important
+}
+
+div[data-style="default"] .toggle h3 a,
+div[data-style="default"] .toggle h3 {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.toggle {
+  h3 a {
+    background-color: $title-color;
+    color: #FFF;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    i {
+      margin-left: auto;
+      font-size: 20px;
+      line-height: 1;
+      transition: all 500ms ease;
+      transform: rotate(0);
+      position: static;
+      order: 1;
+      opacity: 1;
+      width: auto;
+      height: auto;
+      color: inherit;
+      &:before {
+        content: '\F107';
+      }
+    }
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+  &.open {
+    h3 a {
+      background-color: $secondary;
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .inner-toggle-wrap {
+    font-size: 16px;
+    line-height: 1.9;
+    padding: 15px 25px !important;
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+  > div {
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+}

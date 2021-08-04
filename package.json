@@ -1,0 +1,36 @@
+{
+  "name": "pvtlsalientchild",
+  "version": "0.1.0",
+  "description": "PVTL Child Theme for the Salient Theme: https://themeforest.net/item/salient-responsive-multipurpose-theme/4363266",
+  "license": "MIT",
+  "main": "webpack.mix.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint-js": "./node_modules/.bin/eslint -c .eslintrc.js assets/js/*.js assets/js/**/*.js"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "laravel-mix": "^5.0.4",
+    "sass": "^1.26.7",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

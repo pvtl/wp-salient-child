@@ -1,0 +1,96 @@
+<?php
+/**
+ * Boilerplate Widget
+ *
+ * @package pvtl-child
+ */
+
+namespace App\Themes\Pvtl\Widgets;
+
+use App\Themes\Pvtl\Library\PVTL_WP_Widget;
+
+/**
+ * Boilerplate Widget
+ */
+class Boilerplate extends PVTL_WP_Widget {
+
+	/**
+	 * Title of the widget shown in the backend
+	 *
+	 * @var string
+	 */
+	public $title = 'A Short Widget Title';
+
+	/**
+	 * Unique name - should be in lower-kebab-case
+	 *
+	 * @var string
+	 */
+	public $name = 'some-unique-name';
+
+	/**
+	 * CSS class for the frontend wrapper div
+	 *
+	 * @var string
+	 */
+	public $css_class_name = 'some-css-class';
+
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget( $args, $instance ) {
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : '';
+
+		?>
+		<?php echo $args['before_widget']; // @codingStandardsIgnoreLine ?>
+
+		<?php if ( ! empty( $title ) ) : ?>
+			<?php echo $args['before_title']; // @codingStandardsIgnoreLine ?>
+            <?php echo esc_attr( $title ); ?>
+			<?php echo $args['after_title']; // @codingStandardsIgnoreLine ?>
+		<?php endif; ?>
+
+		<?php echo $args['after_widget']; // @codingStandardsIgnoreLine ?>
+		<?php
+	}
+
+	/**
+	 * Back-end widget form.
+	 *
+	 * @param array $instance Previously saved values from database.
+	 */
+	public function form( $instance ) {
+		$title  = ! empty( $instance['title'] ) ? $instance['title'] : '';
+
+		?>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
+				Title:
+			</label>
+			<input
+				type="text"
+				id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+				name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
+				value="<?php echo esc_attr( $title ); ?>"
+				class="widefat title"
+			/>
+		</p>
+		<?php
+	}
+
+	/**
+	 * Sanitize widget form values as they are saved.
+	 *
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 */
+	public function update( $new_instance, $old_instance ) {
+		return array(
+			'title'  => wp_strip_all_tags( $new_instance['title'] ),
+		);
+	}
+
+}

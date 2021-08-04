@@ -1,0 +1,81 @@
+.pvtl-pricing-table {
+  h1, h2, h3, h4, h5, h6, li, {
+    color: #FFF !important;
+  }
+  h3 {
+    em {
+      font-weight: 300;
+      font-style: italic;
+      font-size: 65%;
+    }
+  }
+  .nectar-fancy-ul ul li {
+    padding-left: 32px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #FFF;
+    margin-bottom: 0.75rem;
+  }
+}
+
+
+.pricing-table {
+  margin-bottom: 0;
+  border: none !important;
+  line-height: 1.4;
+  .pricing-row {
+    background-color: $bg-light !important;
+    .pricing-title {
+      border: none;
+      background-color: $title-color;
+      color: #FFF;
+      padding: 12px 1rem;
+      font-size: 16px;
+      font-weight: bold;
+      width: 17%;
+      @media screen and (max-width: 767px) {
+        font-size: 12px;
+        padding: 7px 12px;
+      }
+    }
+    .pricing-content {
+      border: none;
+      padding: 12px 1rem;
+      font-size: 16px;
+      color: $title-color;
+      @media screen and (max-width: 767px) {
+        font-size: 12px;
+        padding: 7px 12px;
+      }
+    }
+    &:not(:last-child) {
+      .pricing-title {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        background-color: $title-color;
+        color: #FFF;
+      }
+      .pricing-content {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
+    }
+  }
+  &.equal-width {
+    .pricing-row {
+      .pricing-title {
+        width: 50%;
+      }
+    }
+  }
+  &.auto-width {
+    .pricing-row {
+      .pricing-title {
+        width: auto;
+      }
+    }
+  }
+  &.white-bg {
+    .pricing-row {
+      background-color: #FFF !important;
+    }
+  }
+}

@@ -1,0 +1,185 @@
+// Add a fallback for scrollbar width
+:root {
+  --scrollbar-width: 0px;
+}
+
+.alignfull {
+  position:     relative;
+  left:         50%;
+  transform:    translateX(-50%);
+  max-width:    calc(100vw - var(--scrollbar-width)) !important;
+  width:        calc(100vw - var(--scrollbar-width)) !important;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.ml-3 {
+  margin-left: 1rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mr-3 {
+  margin-right: 1rem;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.bg-contain {
+  .row-bg.using-image {
+    background-size: contain;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+body {
+  h1, h2, h3, h4, h5, h6 {
+    color: $title-color;
+  }
+}
+
+.larger-text {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@media screen and (min-width: 1000px) {
+  .larger-text {
+    font-size: 18px;
+  }
+}
+
+.fa-ul {
+  li {
+    list-style: none;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .fa-li {
+    position: absolute;
+    top: 6px;
+    color: $primary;
+  }
+  @media screen and (max-width: 690px) {
+    font-size: 14px;
+  }
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+.page-header-overlay-color:after {
+  opacity: $page-header-overlay;
+}
+
+
+@media screen and (min-width: 1000px) {
+  body.material .overlap-top {
+    margin-top: -60px;
+  }
+}
+
+.font-size-18 {
+  font-size: 18px !important;
+}
+
+.page-submenu {
+  ul {
+    @media screen and (min-width: 1000px) {
+      li {
+        margin: 0 20px;
+      }
+      .justify-menu & {
+        margin: 0 auto;
+        max-width: 1355px;
+        display: flex !important;
+        justify-content: space-between;
+        li {
+          margin: 0 15px;
+        }
+      }
+    }
+    li {
+      a {
+        opacity: 1;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      &.current-menu-item {
+        color: $primary;
+      }
+    }
+
+  }
+}
+
+
+// Make icons in buttons appear before the text
+body.material .nectar-button.has-icon {
+  display: inline-flex;
+  align-items: center;
+  span {
+    order: 1;
+    transform: translateX(0) !important;
+  }
+  i {
+    order: 0;
+    position: static !important;
+    transform: translate(0,0) !important;
+    width: auto;
+    margin-right: 0.75rem;
+  }
+}
