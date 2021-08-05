@@ -27,32 +27,34 @@ if(!function_exists('pvtl_accordion')){
 }
 
 // Map the block with vc_map()
-vc_map(
-    array(
-        'name' => __('Pricing Accordion', 'text-domain'),
-        'base' => 'pvtl_accordion',
-        'description' => __('Display a PVTL Pricing Table', 'text-domain'),
-        'category' => __('PVTL', 'text-domain'),
-        'icon' => get_stylesheet_directory_uri() . '/pvtl.png',
-        'params' => array(
-            array(
-                "type" => "textfield",
-                "holder" => "div",
-                "class" => "",
-                "admin_label" => true,
-                "heading" => __("Title", "pvtl"),
-                "param_name" => "accordion_title",
-                "value" => __("", "pvtl"),
-                "description" => __("Enter the title for this pricing accordion above. Then click save changes and you will be able to add inner accordion rows.", "pvtl"),
+if(function_exists('vc_map')) {
+    vc_map(
+        array(
+            'name'                    => __( 'Pricing Accordion', 'text-domain' ),
+            'base'                    => 'pvtl_accordion',
+            'description'             => __( 'Display a PVTL Pricing Table', 'text-domain' ),
+            'category'                => __( 'PVTL', 'text-domain' ),
+            'icon'                    => get_stylesheet_directory_uri() . '/pvtl.png',
+            'params'                  => array(
+                array(
+                    "type"        => "textfield",
+                    "holder"      => "div",
+                    "class"       => "",
+                    "admin_label" => true,
+                    "heading"     => __( "Title", "pvtl" ),
+                    "param_name"  => "accordion_title",
+                    "value"       => __( "", "pvtl" ),
+                    "description" => __( "Enter the title for this pricing accordion above. Then click save changes and you will be able to add inner accordion rows.", "pvtl" ),
+                ),
             ),
-        ),
-        'as_parent' => array('only' => 'pvtl_accordion_item'),
-        'content_element' => true,
-        'show_settings_on_create' => true,
-        'is_container' => true,
-        "js_view" => 'VcColumnView',
-    )
-);
+            'as_parent'               => array( 'only' => 'pvtl_accordion_item' ),
+            'content_element'         => true,
+            'show_settings_on_create' => true,
+            'is_container'            => true,
+            "js_view"                 => 'VcColumnView',
+        )
+    );
+}
 
 if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
     class WPBakeryShortCode_Pvtl_Accordion extends WPBakeryShortCodesContainer {
