@@ -1,6 +1,13 @@
 <?php
-/* Customise Email templates */
+/**
+ * Customise Email Templates
+ *
+ * @package salient-child
+ */
 
-add_filter('mailtpl/customizer_template', function(){
-    return get_stylesheet_directory() . '/email_templates/default.php';
-});
+add_filter(
+	'mailtpl/customizer_template',
+	function() {
+		return get_stylesheet_directory() . '/email/default.php';
+	}
+);
