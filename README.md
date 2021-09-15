@@ -3,7 +3,7 @@
 This is a [Salient child theme](https://themeforest.net/item/salient-responsive-multipurpose-theme/4363266), with:
 
 - Laravel Mix - for frontend asset tooling
-- Custom Page Builder block examples
+- Visual Composer block examples
 - Custom Widget boilerplate
 - Lots of developer friendly, handy tooling such as PHPCS, eslint, editorconfig and more
 
@@ -49,21 +49,9 @@ git clone git@bitbucket.org:pvtl/wordpress-salient-boilerplate-v3.git web/app/th
 
 | Directory | Description |
 | --- | --- |
-| `/acf-json` | ACF config |
 | `/assets` | Frontend assets (scss, js, images) working files |
-| `/assets/images` | Frontend assets (scss, js, images) working files |
-| `/assets/js` | Frontend assets (scss, js, images) working files |
-| `/assets/scss` | SCSS files |
-| `/assets/scss/accordion` | Accordion/toggle style overrides |
-| `/assets/scss/fonts` | Examples for including custom fonts |
-| `/assets/scss/footer` | Styles relating to the footer |
-| `/assets/scss/forms` | Form style overrides & boilerplate |
-| `/assets/scss/general` | General styles that are used site-wide + small utility styles |
-| `/assets/scss/header` | Styles relating to the header |
-| `/assets/scss/pvtl-accordion` | Styles for the example accordion Page Builder element |
-| `/assets/scss/pvtl-table` | Styles for the example table Page Builder element |
-| `/assets/scss/variables` | SCSS variables. e.g. colours, sizes, etc. |
 | `/dist` | Compiled frontend asset code (that you should not touch - but should be committed to the repo) |
+| `/email_templates` | As the name suggests, email templates |
 | `/library` | Libraries and functions that are registered on theme boot and 'globally' accessible |
 | `/vc-elements` | Custom Page Builder element examples. These are auto-loaded by functions.php |
 | `/widgets` | Wordpress widgets |

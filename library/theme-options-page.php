@@ -2,7 +2,7 @@
 /**
  * Create Admin Pages for ACF fields
  *
- * @package pvtl-child
+ * @package salient-child
  */
 
 if ( function_exists( 'acf_add_options_page' ) ) {

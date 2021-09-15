@@ -3,8 +3,8 @@
     <description>Parent ruleset, to use subdirectory rules</description>
 
     <!-- Pivotal Agency's (Wordpress-based) rules -->
-    <rule ref="./web/app/themes/pvtl-child/phpcs.xml">
-        <file>./web/app/themes/pvtl-child/*</file>
+    <rule ref="./web/app/themes/salient-child/phpcs.xml">
+        <file>./web/app/themes/salient-child/*</file>
         <exclude-pattern>./config/*</exclude-pattern>
     </rule>
 

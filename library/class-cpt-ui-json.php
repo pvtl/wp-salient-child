@@ -2,7 +2,7 @@
 /**
  * Automatically export Custom Post Type UI json.
  *
- * @package pvtl-child
+ * @package salient-child
  */
 
 namespace App\Themes\Pvtl\Library;

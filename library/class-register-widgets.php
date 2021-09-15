@@ -2,7 +2,7 @@
 /**
  * Register Widgets
  *
- * @package pvtl-child
+ * @package salient-child
  */
 
 namespace App\Themes\Pvtl\Library;

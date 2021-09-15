@@ -2,7 +2,7 @@
 /**
  * Boilerplate Widget
  *
- * @package pvtl-child
+ * @package salient-child
  */
 
 namespace App\Themes\Pvtl\Widgets;

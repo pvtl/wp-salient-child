@@ -2,7 +2,7 @@
 /**
  * Configure responsive images sizes
  *
- * @package pvtl-child
+ * @package salient-child
  */
 
 // Add additional image sizes.

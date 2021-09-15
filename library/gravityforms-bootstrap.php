@@ -2,7 +2,7 @@
 /**
  * Update Gravity Forms wrappers to have the Bootstrap classes
  *
- * @package pvtl-child
+ * @package salient-child
  */
 
 
