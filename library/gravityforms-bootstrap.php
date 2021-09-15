@@ -5,7 +5,6 @@
  * @package salient-child
  */
 
-
 /*
  * Update the submit button HTML
  */
