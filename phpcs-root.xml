@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ruleset name="Pivotal Agency">
+    <description>Parent ruleset, to use subdirectory rules</description>
+
+    <!-- Pivotal Agency's (Wordpress-based) rules -->
+    <rule ref="./web/app/themes/pvtl-child/phpcs.xml">
+        <file>./web/app/themes/pvtl-child/*</file>
+        <exclude-pattern>./config/*</exclude-pattern>
+    </rule>
+
+    <!-- Roots' (PSR-2) rules -->
+    <rule ref="./config/phpcs.xml">
+        <file>./config/*</file>
+        <exclude-pattern>./web/*</exclude-pattern>
+    </rule>
+</ruleset>
