@@ -6,7 +6,7 @@
 ////////////////////////////////////////
 
 .fa,
-i[class^="icon-"],
+i[class^="icon-"]:not([class*="iconsmind"]),
 [class*=" icon-"],
 i[class*="fa-"],
 span[class*="fa-"] {
