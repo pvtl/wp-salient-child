@@ -2,7 +2,7 @@
 /**
  * Add some additional styles to the admin
  *
- * @package pvtl-child
+ * @package salient-child
  */
 
 add_action(

@@ -2,9 +2,8 @@
 /**
  * Update Gravity Forms wrappers to have the Bootstrap classes
  *
- * @package pvtl-child
+ * @package salient-child
  */
-
 
 /*
  * Update the submit button HTML

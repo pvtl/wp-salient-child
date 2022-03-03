@@ -2,7 +2,7 @@
 /**
  * Enhancements for ACF.
  *
- * @package pvtl-child
+ * @package salient-child
  */
 
 new AcfTextarea();
