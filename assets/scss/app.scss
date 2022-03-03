@@ -11,9 +11,6 @@ i[class^="icon-"]:not([class*="iconsmind"]),
 i[class*="fa-"],
 span[class*="fa-"] {
   font-family: 'Font Awesome 5 Pro';
-  font-weight: 900; // Default to Solid
-  //font-weight: 400; // Default to Regular (Outline)
-  //font-weight: 300; // Default to Light (Outline)
 }
 
 @import "vendor/fontawesome/brands";
