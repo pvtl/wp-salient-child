@@ -4,9 +4,18 @@
 ////////////////////////////////////////
 ///// Font Awesome (font icons) ////////
 ////////////////////////////////////////
+
+.fa,
+i[class^="icon-"],
+[class*=" icon-"],
+i[class*="fa-"],
+span[class*="fa-"] {
+  font-family: 'Font Awesome 5 Pro';
+}
+
+@import "vendor/fontawesome/solid";
 @import "vendor/fontawesome/brands";
 @import "vendor/fontawesome/regular";
-@import "vendor/fontawesome/solid";
 @import "vendor/fontawesome/light";
 @import "vendor/fontawesome/v4-shims";
 @import "vendor/fontawesome/fontawesome";
