@@ -49,3 +49,10 @@ function pvtl_salient_child_enqueue() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pvtl_salient_child_enqueue', 1000 );
+
+
+/** Dequeue the VC SEO js Salient adds which has been overloading admin-ajax */
+function dequeue_vc_vendor_seo_js() {
+    wp_dequeue_script('vc_vendor_seo_js',);
+}
+add_action( 'vc_backend_editor_render', 'dequeue_vc_vendor_seo_js', 100 );
