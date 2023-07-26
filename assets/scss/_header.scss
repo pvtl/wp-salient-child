@@ -15,7 +15,7 @@
 }
 
 // Prevent the width of menu items from jumping around on hover
-body .sf-menu > li:not(.nectar-woo-cart) {
+body .sf-menu >li:not(.nectar-woo-cart):not(.slide-out-widget-area-toggle) {
   overflow: visible;
 }
 

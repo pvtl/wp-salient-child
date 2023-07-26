@@ -5,7 +5,10 @@ mix
   .webpackConfig({
     externals: { jquery: 'jQuery' },
     plugins: [
-      new webpack.IgnorePlugin(/moment/),
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/,
+      })
     ],
   })
   .js('assets/js/app.js', 'dist/js')
@@ -15,7 +18,7 @@ mix
   .options({ processCssUrls: false })
   .browserSync({
     proxy: {
-      target: 'revolutionsportspark.php74.pub.localhost',
+      target: 'pvtl20.pub.localhost',
       // proxyReq: [function(proxyReq) { proxyReq.setHeader('Host', 'pvtl20.pub.localhost'); }],
     },
     open: false,
